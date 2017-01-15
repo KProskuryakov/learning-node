@@ -101,3 +101,53 @@ npm has scoped packages with the formatting below. It's name is just that combin
 npm install @myorg/mypackage --save
 require('@myorg/mypackage')
 ```
+
+I then created a first node.js server by using the http module. That's not very efficient. We're now gonna install express to make that process a lot easier.
+```console
+npm install express --save
+```
+
+Using express is a whole lot easier because it has a built in router. 
+
+Now we're gonna install and setup our first postgresql database. I'm running ubuntu 16.04 so this should be easy.
+```console
+sudo apt-get install postgresql
+```
+Set up the default user password for the postgres user. This is the only user that can admin any databases created in postgresql.
+```console
+sudo passwd postgres
+```
+
+Testing this requires the following commands
+```console
+su - postgres   # change user to postgres
+psql
+```
+
+Should look something like:
+```console
+postgres=#
+# all other users access like so, where DB_NAME is the name of an EXISTING database
+psql DB_NAME
+```
+
+Then you must set the admin password (otherwise no other applications will have access to the database)
+```console
+\password postgres
+\q          #to exit
+```
+
+Create a new database by being in the postgres prompt and inputting the next command.
+```console
+create database testdb;
+\l          #to test
+```
+
+Make a user to access our new testdb database.
+```console
+create user username;
+grant all privileges on database testdb to username;
+\password username   #to set password to the user, otherwise nothing works
+```
+Now the database is set up for use.
+
