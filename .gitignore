@@ -3,3 +3,6 @@
 
 # node modules installed via npm
 node_modules
+
+# log files
+*.log
