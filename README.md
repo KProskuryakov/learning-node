@@ -151,3 +151,8 @@ grant all privileges on database testdb to username;
 ```
 Now the database is set up for use.
 
+Sample database commands:
+```sql
+delete from users where name is null;
+update users set age = 30 where name = 'bill';
+```
