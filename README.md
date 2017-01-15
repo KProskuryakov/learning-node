@@ -14,7 +14,7 @@ sudo apt-get update
 sudo apt-get install build-essential libssl-dev
 ```
 
-Then look to the https://github.com/creationix/nvm page for the curl script
+Then look to the [nvm page](https://github.com/creationix/nvm) for the curl script
 ```console
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 ```
