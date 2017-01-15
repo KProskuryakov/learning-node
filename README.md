@@ -14,7 +14,7 @@ sudo apt-get update
 sudo apt-get install build-essential libssl-dev
 ```
 
-Then look to the [nvm page](https://github.com/creationix/nvm) for the curl script
+Then look to the [nvm page](https://github.com/creationix/nvm) for the curl script. The version numbers can change here.
 ```console
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 ```
@@ -31,3 +31,9 @@ nvm install node
 ```
 
 With node installed, the executable is called node (not nodejs like it would be if installing node by itself). nvm creates the node->nodejs alias for us. nvm also installs npm for us.
+
+
+Node is installed in this directory now, and just for future reference, ~ is the home directory in linux (I'm embarrased that I didn't realize that):
+```console
+~/.nvm/versions/node/v7.4.0
+```
