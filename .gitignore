@@ -1,2 +1,5 @@
-
+# webstorm project files
 .idea/
+
+# node modules installed via npm
+node_modules

@@ -1,5 +1,9 @@
 # learning-node
 
+I'm learning node.js
+
+I'm using [this tutorial](https://blog.risingstack.com/node-hero-tutorial-getting-started-with-node-js/).
+
 Installing node on ubuntu 16.04 by itself. (NOT WHAT I DID)
 ```console
 sudo apt-get update
@@ -66,10 +70,34 @@ So we should make a package.json file. Run this command and fill out to the best
 npm init
 ```
 
-
 Then we created an app folder and put another index.js and calc.js in there. Turns out \` these backticks make template strings so that we can use the ${stuff} notation to reference specific variables in the string itself. Also we  can define a scripts script in the package.json that looks like the below thing to run a specific file by calling npm start.
 ```json
 "start": "node index.js"
 ```
 
-Okay, well the 
+Okay, well webstorm is yelling at me for using ecmascript6 and not transpiling it to ecmascript5 with babel. If it comes up, I guess I'll find this message at some point. Look up how to install babel and use the default filewatcher in webstorm to do it.
+
+We're now gonna add the lodash dependency to our project.
+```console
+npm install lodash --save    # this creates a dependency in our package.json
+```
+
+We also added node_modules to the .gitignore so that others can download the project and just npm the dependencies themselves. Might be useful to check out this [.gitignore](https://blog.risingstack.com/node-hero-npm-tutorial/) as an example for later projects too.
+
+We're also going to add a dev dependency. These don't get installed in a production environment.
+```console
+npm install mocha --save-dev
+```
+
+We're gonna add a test script to our package.json so that we can run mocha. We don't have to, since mocha is installed globally anyway, but it's good practice I suppose. We can call mocha with npm test.
+```json
+"test": "mocha test"
+```
+
+npm has scoped packages with the formatting below. It's name is just that combination right there. 
+```console
+@myorg/mypackage
+
+npm install @myorg/mypackage --save
+require('@myorg/mypackage')
+```
