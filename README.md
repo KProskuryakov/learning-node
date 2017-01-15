@@ -51,4 +51,23 @@ hello from Node.js
 undefined                 # not sure why it says undefined at the end, might be a null return or something.
 ```
 
-Time to pick an ide/text editor for this. 
+Time to pick an ide/text editor for this. I'm gonna try vim. I'm scared. Let's go.
+```console
+vim index.js
+```
+
+I created a ~/dev/node/helloworld folder and now have an index.js inside.
+```javascript
+console.log('hello from node.js')   // running this yields what you might expect
+```
+
+So we should make a package.json file. Run this command and fill out to the best of ability.
+```console
+npm init
+```
+
+
+Then we created an app folder and put another index.js and calc.js in there. Turns out \` these backticks make template strings so that we can use the ${stuff} notation to reference specific variables in the string itself. Also we  can define a scripts script in the package.json that looks like the below thing to run a specific file by calling npm start.
+```json
+"start": "node index.js"
+```
