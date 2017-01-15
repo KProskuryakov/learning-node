@@ -18,12 +18,7 @@ Then look to the [nvm page](https://github.com/creationix/nvm) for the curl scri
 ```console
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 ```
-
-Then run this marvelous gem... which I'm still trying to parse:
-```console
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-```
+Close and reopen terminal.
 
 And test the nvm install by doing
 ```console
