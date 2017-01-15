@@ -37,3 +37,18 @@ Node is installed in this directory now, and just for future reference, ~ is the
 ```console
 ~/.nvm/versions/node/v7.4.0
 ```
+
+
+With that squared away, we can start playing with the node repl. This can be activated by doing:
+```console
+node
+```
+
+What a surprise. Now we can type fancy things in to test them out in node. ctrl-d to get out of repl.
+```console
+> console.log('hello from Node.js')
+hello from Node.js  
+undefined                 # not sure why it says undefined at the end, might be a null return or something.
+```
+
+Time to pick an ide/text editor for this. 
